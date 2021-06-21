@@ -6,6 +6,9 @@ public class Main {
         int min = lowestValue(list);
         System.out.println(min);
 
+        int max = highestValue(list);
+        System.out.println(max);
+
     }
     public static int lowestValue(int[] list) {
         int minValue = list[0];
@@ -15,5 +18,14 @@ public class Main {
             }
         }
         return minValue;
+    }
+    public static int highestValue(int[] list) {
+        int maxValue = list[0];
+        for(int i = 1; i < list.length;i++){
+            if(list[i] > maxValue){
+                maxValue = list[i];
+            }
+        }
+        return maxValue;
     }
 }
